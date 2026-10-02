@@ -7,6 +7,11 @@
     <title>Alyson Frio | Portfolio</title>
 
     <style>
+
+        /* =========================
+           COLOR PALETTE
+        ========================= */
+
         :root {
             --green: #173f35;
             --dark-green: #0f2d26;
@@ -16,7 +21,13 @@
             --gold: #c9a86a;
             --text: #25322e;
             --gray: #6c7773;
+            --border: #ddd8ca;
         }
+
+
+        /* =========================
+           GENERAL
+        ========================= */
 
         * {
             margin: 0;
@@ -32,13 +43,34 @@
             line-height: 1.6;
         }
 
-        h1, h2, h3 {
+        h1,
+        h2,
+        h3 {
             font-family: Georgia, "Times New Roman", serif;
         }
 
         a {
             color: inherit;
         }
+
+        section {
+            max-width: 1150px;
+            margin: 0 auto;
+            padding: 90px 30px;
+        }
+
+        .section-title {
+            color: var(--green);
+            font-size: 2.3rem;
+            margin-bottom: 35px;
+        }
+
+        .section-intro {
+            max-width: 700px;
+            color: var(--gray);
+            margin-bottom: 40px;
+        }
+
 
         /* =========================
            NAVIGATION
@@ -48,14 +80,14 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            background: rgba(247, 244, 236, 0.96);
+            background: rgba(247, 244, 236, 0.97);
             backdrop-filter: blur(10px);
-            border-bottom: 1px solid #ddd8ca;
+            border-bottom: 1px solid var(--border);
         }
 
         .nav-container {
             max-width: 1150px;
-            margin: auto;
+            margin: 0 auto;
             padding: 18px 30px;
             display: flex;
             justify-content: space-between;
@@ -88,27 +120,6 @@
             color: var(--gold);
         }
 
-        /* =========================
-           GENERAL
-        ========================= */
-
-        section {
-            max-width: 1150px;
-            margin: auto;
-            padding: 90px 30px;
-        }
-
-        .section-title {
-            color: var(--green);
-            font-size: 2.3rem;
-            margin-bottom: 35px;
-        }
-
-        .section-intro {
-            max-width: 700px;
-            color: var(--gray);
-            margin-bottom: 40px;
-        }
 
         /* =========================
            HERO
@@ -119,14 +130,18 @@
             display: flex;
             align-items: center;
             background:
-                radial-gradient(circle at top right, rgba(201, 168, 106, 0.18), transparent 35%),
+                radial-gradient(
+                    circle at top right,
+                    rgba(201, 168, 106, 0.18),
+                    transparent 35%
+                ),
                 var(--cream);
         }
 
         .hero-content {
             max-width: 1150px;
             width: 100%;
-            margin: auto;
+            margin: 0 auto;
             padding: 70px 30px;
             display: grid;
             grid-template-columns: 1.3fr 0.7fr;
@@ -211,15 +226,19 @@
             box-shadow: 0 15px 40px rgba(23, 63, 53, 0.18);
         }
 
+
         /* =========================
            ABOUT
         ========================= */
 
         .about {
             background: white;
+            max-width: none;
         }
 
         .about-grid {
+            max-width: 1150px;
+            margin: 0 auto;
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 60px;
@@ -241,6 +260,7 @@
             margin-bottom: 15px;
             font-size: 1.5rem;
         }
+
 
         /* =========================
            EDUCATION
@@ -271,12 +291,22 @@
             margin-bottom: 15px;
         }
 
+
         /* =========================
            EXPERIENCE
         ========================= */
 
         .experience {
             background: white;
+            max-width: none;
+        }
+
+        .experience > .eyebrow,
+        .experience > .section-title,
+        .experience > .timeline {
+            max-width: 1150px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .timeline {
@@ -326,6 +356,7 @@
             margin-bottom: 7px;
         }
 
+
         /* =========================
            LEADERSHIP
         ========================= */
@@ -369,201 +400,105 @@
             margin-bottom: 7px;
         }
 
-        <!-- =========================
-     PROJECTS
-========================= -->
 
-<section class="projects" id="projects">
-
-    <div class="projects-inner">
-
-        <div class="eyebrow">
-            Projects
-        </div>
-
-        <h2 class="section-title">
-            Experiences in Action
-        </h2>
-
-        <p class="section-intro">
-            These projects highlight experiences where I have applied
-            leadership, organization, communication, creativity, and
-            community engagement in real-world settings.
-        </p>
-
-        <div class="project-grid">
-
-            <!-- PROJECT 1 -->
-
-            <article class="project-card">
-
-                <div class="project-number">
-                    PROJECT 01
-                </div>
-
-                <h3>
-                    Rutgers Orientation Leader
-                </h3>
-
-                <p>
-                    Supported incoming Rutgers students through their
-                    transition to college by leading tours, facilitating
-                    small-group programs, and connecting students with
-                    academic and campus resources. Personally guided
-                    120+ incoming students while working with a team
-                    supporting 7,000+ new students.
-                </p>
-
-                <div class="project-reference">
-                    <strong>Reference:</strong>
-
-                    <a
-                        href="https://www.instagram.com/rutgerstransition/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Rutgers Student Orientation & Transition Programs →
-                    </a>
-                </div>
-
-            </article>
-
-
-            <!-- PROJECT 2 -->
-
-            <article class="project-card">
-
-                <div class="project-number">
-                    PROJECT 02
-                </div>
-
-                <h3>
-                    HARU Dance Organization & Member Systems
-                </h3>
-
-                <p>
-                    As Secretary, I help organize the systems that support
-                    a 250+ member dance organization. My work includes
-                    managing Google Drive resources, meeting minutes,
-                    attendance records, Google Forms, and member data while
-                    collaborating with the executive board to promote
-                    inclusion and community.
-                </p>
-
-                <div class="project-reference">
-
-                    <strong>References:</strong>
-
-                    <div class="reference-links">
-
-                        <a
-                            href="https://www.instagram.com/harudance_official/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            HARU Instagram →
-                        </a>
-
-                        <a
-                            href="https://www.youtube.com/c/HaruDance_Official"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            HARU YouTube →
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <!-- PROJECT 3 -->
-
-            <article class="project-card">
-
-                <div class="project-number">
-                    PROJECT 03
-                </div>
-
-                <h3>
-                    Omega Phi Alpha Community Service
-                </h3>
-
-                <p>
-                    Through Omega Phi Alpha, I contribute to community
-                    service initiatives while developing teamwork,
-                    communication, and leadership skills. I complete
-                    15+ hours of community service each semester and
-                    participate in weekly chapter meetings.
-                </p>
-
-                <div class="project-reference">
-
-                    <strong>Reference:</strong>
-
-                    <a
-                        href="https://www.instagram.com/ophiarutgers/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Rutgers Omega Phi Alpha Instagram →
-                    </a>
-
-                </div>
-
-            </article>
-
-        </div>
-
-    </div>
-
-</section>
-.project-reference {
-    margin-top: auto;
-    padding-top: 25px;
-    border-top: 1px solid #e5e5e5;
-    font-size: 0.85rem;
-    color: var(--gray);
-}
-
-.project-reference strong {
-    display: block;
-    color: var(--green);
-    margin-bottom: 8px;
-}
-
-.project-reference a {
-    color: var(--green);
-    font-weight: 700;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.project-reference a:hover {
-    color: var(--gold);
-    text-decoration: underline;
-}
-
-.reference-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 18px;
-}
-
-.reference-links a {
-    color: var(--green);
-    font-weight: 700;
-    text-decoration: none;
-}
-
-.reference-links a:hover {
-    color: var(--gold);
-    text-decoration: underline;
-}
         /* =========================
-           CAMPUS INVOLVEMENT
+           PROJECTS
+        ========================= */
+
+        .projects {
+            background: var(--green);
+            max-width: none;
+        }
+
+        .projects-inner {
+            max-width: 1150px;
+            margin: 0 auto;
+        }
+
+        .projects .section-title {
+            color: white;
+        }
+
+        .projects .section-intro {
+            color: #dce8e2;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            min-height: 390px;
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .project-number {
+            color: var(--gold);
+            font-size: 0.8rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        .project-card h3 {
+            color: var(--green);
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+
+        .project-card p {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        /* THE VISIBLE REFERENCES */
+
+        .project-reference {
+            margin-top: auto;
+            padding-top: 25px;
+            border-top: 1px solid #e5e5e5;
+            font-size: 0.85rem;
+            color: var(--gray);
+        }
+
+        .project-reference strong {
+            display: block;
+            color: var(--green);
+            margin-bottom: 8px;
+        }
+
+        .project-reference a {
+            color: var(--green);
+            font-weight: 700;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .project-reference a:hover {
+            color: var(--gold);
+            text-decoration: underline;
+        }
+
+        .reference-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+        }
+
+
+        /* =========================
+           CAMPUS
         ========================= */
 
         .campus {
@@ -580,6 +515,7 @@
             color: var(--green);
             margin-bottom: 10px;
         }
+
 
         /* =========================
            SKILLS
@@ -619,12 +555,22 @@
             border-bottom: none;
         }
 
+
         /* =========================
            EMPLOYERS
         ========================= */
 
         .employers {
             background: white;
+            max-width: none;
+        }
+
+        .employers > .eyebrow,
+        .employers > .section-title,
+        .employer-box {
+            max-width: 1150px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .employer-box {
@@ -649,6 +595,7 @@
             color: var(--gray);
         }
 
+
         /* =========================
            CONTACT
         ========================= */
@@ -660,7 +607,7 @@
 
         .contact-inner {
             max-width: 1150px;
-            margin: auto;
+            margin: 0 auto;
             text-align: center;
         }
 
@@ -694,6 +641,7 @@
             color: var(--gold);
         }
 
+
         /* =========================
            FOOTER
         ========================= */
@@ -706,8 +654,9 @@
             font-size: 0.85rem;
         }
 
+
         /* =========================
-           RESPONSIVE
+           MOBILE
         ========================= */
 
         @media (max-width: 900px) {
@@ -761,7 +710,7 @@
             }
 
             .nav-container {
-                padding: 15px 15px;
+                padding: 15px;
             }
 
             .nav-links {
@@ -797,32 +746,64 @@
                 font-size: 2.2rem;
             }
         }
+
     </style>
 </head>
 
+
 <body>
+
 
     <!-- =========================
          NAVIGATION
     ========================= -->
 
     <nav>
+
         <div class="nav-container">
 
-            <a href="#home" class="logo">Alyson Frio</a>
+            <a href="#home" class="logo">
+                Alyson Frio
+            </a>
 
             <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#leadership">Leadership</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#employers">Employers</a></li>
-                <li><a href="#contact">Contact</a></li>
+
+                <li>
+                    <a href="#about">About</a>
+                </li>
+
+                <li>
+                    <a href="#education">Education</a>
+                </li>
+
+                <li>
+                    <a href="#experience">Experience</a>
+                </li>
+
+                <li>
+                    <a href="#leadership">Leadership</a>
+                </li>
+
+                <li>
+                    <a href="#projects">Projects</a>
+                </li>
+
+                <li>
+                    <a href="#skills">Skills</a>
+                </li>
+
+                <li>
+                    <a href="#employers">Employers</a>
+                </li>
+
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+
             </ul>
 
         </div>
+
     </nav>
 
 
@@ -845,30 +826,41 @@
                     <span>Frio.</span>
                 </h1>
 
+                <!-- ONE-SENTENCE PERSONAL STATEMENT -->
+
                 <p class="hero-statement">
-                    I am a Rutgers Business School student pursuing Marketing & Accounting
-                    with experience in leadership, communication, community engagement,
-                    and creative problem-solving.
+                    I am a Rutgers Business School student pursuing Marketing & Accounting with experience in leadership, communication, community engagement, and creative problem-solving.
                 </p>
 
                 <div class="hero-buttons">
-                    <a href="#projects" class="button button-primary">
+
+                    <a
+                        href="#projects"
+                        class="button button-primary"
+                    >
                         View My Projects
                     </a>
 
-                    <a href="#contact" class="button button-secondary">
+                    <a
+                        href="#contact"
+                        class="button button-secondary"
+                    >
                         Get In Touch
                     </a>
+
                 </div>
 
             </div>
 
+
             <div class="headshot-wrapper">
+
                 <img
                     src="headshot.JPG"
                     alt="Professional headshot of Alyson Frio"
                     class="headshot"
                 >
+
             </div>
 
         </div>
@@ -914,6 +906,7 @@
                 </p>
 
             </div>
+
 
             <div class="about-highlight">
 
@@ -963,8 +956,12 @@
             </p>
 
             <p>
-                <strong>Bachelor of Science in Marketing & Accounting</strong>
+                <strong>
+                    Bachelor of Science in Marketing & Accounting
+                </strong>
+
                 <br>
+
                 GPA: 3.8
             </p>
 
@@ -996,7 +993,8 @@
 
         <div class="timeline">
 
-            <!-- Orientation Leader -->
+
+            <!-- ORIENTATION LEADER -->
 
             <div class="timeline-item">
 
@@ -1009,6 +1007,7 @@
                 </div>
 
                 <ul>
+
                     <li>
                         Welcomed and personally guided 120+ incoming students
                         through their transition to Rutgers while collaborating
@@ -1025,12 +1024,13 @@
                         Helped foster an inclusive and welcoming environment
                         for incoming Rutgers students.
                     </li>
+
                 </ul>
 
             </div>
 
 
-            <!-- Learning Express -->
+            <!-- LEARNING EXPRESS -->
 
             <div class="timeline-item">
 
@@ -1043,6 +1043,7 @@
                 </div>
 
                 <ul>
+
                     <li>
                         Planned and facilitated hands-on sensory-based events
                         encouraging creativity, fine motor development, and
@@ -1053,6 +1054,7 @@
                         Guided children and families in selecting
                         age-appropriate educational toys and activities.
                     </li>
+
                 </ul>
 
             </div>
@@ -1078,6 +1080,7 @@
 
         <div class="leadership-grid">
 
+
             <!-- HARU -->
 
             <div class="leadership-card">
@@ -1091,9 +1094,11 @@
                 </div>
 
                 <ul>
+
                     <li>
-                        Manage and organize Google Drive resources, meeting
-                        minutes, attendance records, and member information.
+                        Manage and organize Google Drive resources,
+                        meeting minutes, attendance records, and member
+                        information.
                     </li>
 
                     <li>
@@ -1106,6 +1111,7 @@
                         groups and facilitate member inclusion within a
                         community of 250+ active members.
                     </li>
+
                 </ul>
 
             </div>
@@ -1124,6 +1130,7 @@
                 </div>
 
                 <ul>
+
                     <li>
                         Complete 15+ hours of community service each semester.
                     </li>
@@ -1132,6 +1139,7 @@
                         Participate in weekly chapter meetings and contribute
                         to a supportive and collaborative chapter environment.
                     </li>
+
                 </ul>
 
             </div>
@@ -1151,6 +1159,7 @@
                 </div>
 
                 <ul>
+
                     <li>
                         Represented 750+ students and led an executive board
                         of 20+ members.
@@ -1160,6 +1169,7 @@
                         Organized community-building events and initiatives
                         while developing agendas and coordinating planning.
                     </li>
+
                 </ul>
 
             </div>
@@ -1194,7 +1204,10 @@
 
             <div class="project-grid">
 
-                <!-- PROJECT 1 -->
+
+                <!-- =========================
+                     PROJECT 1
+                ========================= -->
 
                 <article class="project-card">
 
@@ -1215,15 +1228,18 @@
                         supporting 7,000+ new students.
                     </p>
 
-                    <div class="project-links">
+                    <div class="project-reference">
+
+                        <strong>
+                            Reference:
+                        </strong>
 
                         <a
-                            href="https://www.instagram.com/rutgers.transition/"
+                            href="https://www.instagram.com/rutgerstransition/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            class="project-link"
                         >
-                            Rutgers Transition Instagram →
+                            Rutgers Student Orientation & Transition Programs →
                         </a>
 
                     </div>
@@ -1231,7 +1247,9 @@
                 </article>
 
 
-                <!-- PROJECT 2 -->
+                <!-- =========================
+                     PROJECT 2
+                ========================= -->
 
                 <article class="project-card">
 
@@ -1252,32 +1270,40 @@
                         inclusion and community.
                     </p>
 
-                    <div class="project-links">
+                    <div class="project-reference">
 
-                        <a
-                            href="https://www.instagram.com/harudance_official/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="project-link"
-                        >
-                            Instagram →
-                        </a>
+                        <strong>
+                            References:
+                        </strong>
 
-                        <a
-                            href="https://www.youtube.com/@harudance_official"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="project-link"
-                        >
-                            YouTube →
-                        </a>
+                        <div class="reference-links">
+
+                            <a
+                                href="https://www.instagram.com/harudance_official/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                HARU Instagram →
+                            </a>
+
+                            <a
+                                href="https://www.youtube.com/c/HaruDance_Official"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                HARU YouTube →
+                            </a>
+
+                        </div>
 
                     </div>
 
                 </article>
 
 
-                <!-- PROJECT 3 -->
+                <!-- =========================
+                     PROJECT 3
+                ========================= -->
 
                 <article class="project-card">
 
@@ -1297,20 +1323,24 @@
                         participate in weekly chapter meetings.
                     </p>
 
-                    <div class="project-links">
+                    <div class="project-reference">
+
+                        <strong>
+                            Reference:
+                        </strong>
 
                         <a
                             href="https://www.instagram.com/ophiarutgers/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            class="project-link"
                         >
-                            Rutgers OPA Instagram →
+                            Rutgers Omega Phi Alpha Instagram →
                         </a>
 
                     </div>
 
                 </article>
+
 
             </div>
 
@@ -1372,9 +1402,11 @@
             leadership experiences.
         </p>
 
+
         <div class="skills-grid">
 
-            <!-- Creative -->
+
+            <!-- CREATIVE -->
 
             <div class="skill-card">
 
@@ -1383,16 +1415,29 @@
                 </h3>
 
                 <ul class="skill-list">
-                    <li>Adobe Illustrator</li>
-                    <li>Adobe Photoshop</li>
-                    <li>Canva</li>
-                    <li>Social Media Design & Editing</li>
+
+                    <li>
+                        Adobe Illustrator
+                    </li>
+
+                    <li>
+                        Adobe Photoshop
+                    </li>
+
+                    <li>
+                        Canva
+                    </li>
+
+                    <li>
+                        Social Media Design & Editing
+                    </li>
+
                 </ul>
 
             </div>
 
 
-            <!-- Professional -->
+            <!-- PROFESSIONAL -->
 
             <div class="skill-card">
 
@@ -1401,18 +1446,37 @@
                 </h3>
 
                 <ul class="skill-list">
-                    <li>Public Speaking</li>
-                    <li>Leadership</li>
-                    <li>Teamwork</li>
-                    <li>Community Engagement</li>
-                    <li>Event Coordination</li>
-                    <li>Organization</li>
+
+                    <li>
+                        Public Speaking
+                    </li>
+
+                    <li>
+                        Leadership
+                    </li>
+
+                    <li>
+                        Teamwork
+                    </li>
+
+                    <li>
+                        Community Engagement
+                    </li>
+
+                    <li>
+                        Event Coordination
+                    </li>
+
+                    <li>
+                        Organization
+                    </li>
+
                 </ul>
 
             </div>
 
 
-            <!-- Technical -->
+            <!-- TECHNICAL -->
 
             <div class="skill-card">
 
@@ -1421,19 +1485,41 @@
                 </h3>
 
                 <ul class="skill-list">
-                    <li>Google Drive</li>
-                    <li>Google Forms</li>
-                    <li>Member Data Tracking</li>
-                    <li>Financial Recordkeeping</li>
-                    <li>Accounting Principles</li>
-                    <li>Software Applications</li>
+
+                    <li>
+                        Google Drive
+                    </li>
+
+                    <li>
+                        Google Forms
+                    </li>
+
+                    <li>
+                        Member Data Tracking
+                    </li>
+
+                    <li>
+                        Financial Recordkeeping
+                    </li>
+
+                    <li>
+                        Accounting Principles
+                    </li>
+
+                    <li>
+                        Software Applications
+                    </li>
+
                 </ul>
 
             </div>
 
         </div>
 
-        <br><br>
+
+        <br>
+        <br>
+
 
         <div class="skill-card">
 
@@ -1442,6 +1528,7 @@
             </h3>
 
             <ul class="skill-list">
+
                 <li>
                     Cultural Intelligence Training — 2026
                 </li>
@@ -1449,6 +1536,7 @@
                 <li>
                     Bookkeeping Certification — 2025
                 </li>
+
             </ul>
 
         </div>
@@ -1472,6 +1560,7 @@
 
         <div class="employer-box">
 
+
             <div class="employer-card">
 
                 <h3>
@@ -1483,6 +1572,7 @@
                 </p>
 
             </div>
+
 
             <div class="employer-card">
 
@@ -1551,6 +1641,7 @@
         </p>
 
     </footer>
+
 
 </body>
 </html>

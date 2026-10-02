@@ -1,0 +1,1404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Alyson Frio | Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    /* =========================
+       GENERAL
+    ========================= */
+
+    :root {
+      --green: #1e4d3b;
+      --dark-green: #12372b;
+      --cream: #f8f7f2;
+      --light-green: #eef2ed;
+      --sage: #dce7df;
+      --brown: #b37b4c;
+      --text: #18221f;
+      --muted: #66716d;
+      --white: #ffffff;
+      --border: #dfe4df;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 48px));
+      margin: auto;
+    }
+
+
+    /* =========================
+       NAVIGATION
+    ========================= */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(248, 247, 242, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    nav {
+      height: 75px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-family: "Playfair Display", serif;
+      font-size: 1.7rem;
+      font-weight: 700;
+    }
+
+    .logo span {
+      color: var(--brown);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--green);
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: 680px;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+      gap: 70px;
+      padding: 80px 0;
+    }
+
+    .eyebrow {
+      color: var(--green);
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      font-size: 0.75rem;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(4.5rem, 9vw, 7.5rem);
+      line-height: 0.85;
+      letter-spacing: -0.06em;
+    }
+
+    h1 span {
+      color: var(--green);
+    }
+
+    .hero-description {
+      margin: 32px 0 28px;
+      max-width: 650px;
+      font-size: 1.15rem;
+      color: #4d5955;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 22px;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      transition: 0.2s;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .primary {
+      background: var(--green);
+      color: white;
+    }
+
+    .secondary {
+      background: white;
+      border: 1px solid var(--border);
+    }
+
+    .facts {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+      color: var(--muted);
+      font-size: 0.78rem;
+    }
+
+    .photo-container {
+      position: relative;
+      max-width: 440px;
+      justify-self: end;
+    }
+
+    .photo {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      object-position: center 35%;
+      border-radius: 50%;
+      position: relative;
+      z-index: 2;
+      box-shadow: 0 20px 60px rgba(24, 34, 31, 0.12);
+    }
+
+    .photo-background {
+      position: absolute;
+      width: 75%;
+      height: 75%;
+      right: -20px;
+      bottom: -20px;
+      background: var(--sage);
+      border-radius: 50%;
+    }
+
+
+    /* =========================
+       SECTIONS
+    ========================= */
+
+    section {
+      padding: 105px 0;
+    }
+
+    .light {
+      background: var(--light-green);
+    }
+
+    .section-label {
+      color: var(--green);
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      font-size: 0.74rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      line-height: 1.05;
+      letter-spacing: -0.045em;
+    }
+
+    .intro {
+      max-width: 850px;
+      margin-top: 28px;
+      font-size: 1.1rem;
+      color: var(--muted);
+    }
+
+
+    /* =========================
+       SKILLS
+    ========================= */
+
+    .section-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 40px;
+      margin-bottom: 50px;
+    }
+
+    .section-description {
+      max-width: 350px;
+      color: var(--muted);
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .skill-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 28px;
+      min-height: 290px;
+      transition: 0.2s;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 50px rgba(24, 34, 31, 0.08);
+    }
+
+    .skill-number {
+      color: var(--brown);
+      font-size: 0.75rem;
+      font-weight: 800;
+    }
+
+    .skill-card h3 {
+      margin: 35px 0 18px;
+      font-size: 1.15rem;
+    }
+
+    .skill-card ul {
+      list-style: none;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .skill-card li {
+      padding: 7px 0;
+      border-bottom: 1px solid #edf0ed;
+    }
+
+
+    /* =========================
+       PROJECTS
+    ========================= */
+
+    .projects-section {
+      background: var(--dark-green);
+      color: white;
+    }
+
+    .projects-section .section-label {
+      color: #c7d9ce;
+    }
+
+    .projects-section .section-description {
+      color: #b7c7bf;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: 1.25fr 1fr 1fr;
+      gap: 18px;
+    }
+
+    .project {
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.06);
+      border-radius: 20px;
+      padding: 30px;
+      min-height: 400px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project-number {
+      color: #bcd1c5;
+      font-family: "Playfair Display", serif;
+      font-size: 1.4rem;
+      text-align: right;
+    }
+
+    .project h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 1.8rem;
+      line-height: 1.1;
+      margin: 55px 0 18px;
+    }
+
+    .project p {
+      color: #c4d0ca;
+      font-size: 0.9rem;
+    }
+
+    .tags {
+      margin-top: auto;
+      padding-top: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+
+    .tag {
+      background: rgba(255,255,255,0.08);
+      color: #d9e2dd;
+      border-radius: 8px;
+      padding: 6px 9px;
+      font-size: 0.68rem;
+    }
+
+    .project-note {
+      margin-top: 25px;
+      color: #aebeb6;
+      font-size: 0.82rem;
+    }
+
+
+    /* =========================
+       EXPERIENCE
+    ========================= */
+
+    .timeline {
+      margin-top: 40px;
+      border-top: 1px solid var(--border);
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 45px;
+      padding: 30px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .date {
+      color: var(--green);
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+    }
+
+    .timeline-item h3 {
+      font-size: 1.25rem;
+    }
+
+    .company {
+      color: var(--text);
+      font-weight: 600;
+      margin-top: 4px;
+    }
+
+    .timeline-item p:last-child {
+      color: var(--muted);
+      margin-top: 7px;
+    }
+
+
+    /* =========================
+       EDUCATION
+    ========================= */
+
+    .education {
+      background: white;
+    }
+
+    .education-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 90px;
+    }
+
+    .credentials {
+      border-top: 1px solid var(--border);
+    }
+
+    .credential {
+      padding: 18px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .credential strong {
+      display: block;
+      font-size: 0.95rem;
+    }
+
+    .credential span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.84rem;
+    }
+
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    .contact {
+      background: var(--sage);
+      text-align: center;
+    }
+
+    .contact h2 {
+      font-size: clamp(3rem, 7vw, 5.5rem);
+    }
+
+    .contact-text {
+      max-width: 500px;
+      margin: 20px auto;
+      color: #53615a;
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .contact-links a {
+      background: white;
+      border: 1px solid rgba(24,34,31,0.1);
+      border-radius: 50px;
+      padding: 11px 18px;
+      font-size: 0.86rem;
+      font-weight: 700;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: var(--dark-green);
+      color: #aebeb6;
+      padding: 25px 0;
+      font-size: 0.75rem;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 900px) {
+
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 55px;
+      }
+
+      .photo-container {
+        justify-self: center;
+        width: min(390px, 80vw);
+      }
+
+      .skills {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .projects {
+        grid-template-columns: 1fr;
+      }
+
+      .education-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+
+    }
+
+    @media (max-width: 650px) {
+
+      .container {
+        width: calc(100% - 32px);
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding: 65px 0;
+      }
+
+      h1 {
+        font-size: 4.4rem;
+      }
+
+      section {
+        padding: 75px 0;
+      }
+
+      .section-heading {
+        display: block;
+      }
+
+      .section-description {
+        margin-top: 18px;
+      }
+
+      .skills {
+        grid-template-columns: 1fr;
+      }
+
+      .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      .footer-content {
+        flex-direction: column;
+        text-align: center;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<header>
+
+  <div class="container">
+
+    <nav>
+
+      <a href="#home" class="logo">
+        AF<span>.</span>
+      </a>
+
+      <div class="nav-links">
+
+        <a href="#about">About</a>
+
+        <a href="#skills">Skills</a>
+
+        <a href="#projects">Projects</a>
+
+        <a href="#experience">Experience</a>
+
+        <a href="#contact">Contact</a>
+
+      </div>
+
+    </nav>
+
+  </div>
+
+</header>
+
+
+
+<main>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero container" id="home">
+
+  <div>
+
+    <p class="eyebrow">
+      Rutgers Business School • Honors College
+    </p>
+
+    <h1>
+      Alyson<br>
+      <span>Frio</span>
+    </h1>
+
+    <p class="hero-description">
+
+      I’m a Rutgers Business School student combining
+      marketing, accounting, creative communication,
+      and leadership to build engaging experiences
+      and help people feel connected.
+
+    </p>
+
+
+    <div class="buttons">
+
+      <a href="#projects" class="button primary">
+        Explore My Work
+      </a>
+
+      <a href="#contact" class="button secondary">
+        Get In Touch
+      </a>
+
+    </div>
+
+
+    <div class="facts">
+
+      <span>Rutgers University–New Brunswick</span>
+
+      <span>B.S. Marketing & Accounting</span>
+
+      <span>GPA 3.8</span>
+
+    </div>
+
+  </div>
+
+
+  <div class="photo-container">
+
+    <div class="photo-background"></div>
+
+    <img
+      src="headshot.JPG"
+      alt="Alyson Frio"
+      class="photo"
+    >
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     PERSONAL STATEMENT
+========================= -->
+
+<section id="about" class="light">
+
+  <div class="container">
+
+    <p class="section-label">
+      01 / Personal Statement
+    </p>
+
+    <h2>
+      Creative work with a
+      <em style="color:#1e4d3b;">
+        people-first
+      </em>
+      perspective.
+    </h2>
+
+    <p class="intro">
+
+      As a Rutgers Business School student in the Honors College,
+      I’m interested in work that brings together creativity,
+      communication, organization, and community. My experiences
+      in student leadership, orientation, education, social media,
+      and service have taught me how to communicate with different
+      audiences, create welcoming environments, and turn ideas
+      into organized experiences.
+
+    </p>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     SKILLS
+========================= -->
+
+<section id="skills">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <div>
+
+        <p class="section-label">
+          02 / Skills
+        </p>
+
+        <h2>
+          What I bring to the table
+        </h2>
+
+      </div>
+
+      <p class="section-description">
+
+        A mix of creative, organizational,
+        communication, and business skills.
+
+      </p>
+
+    </div>
+
+
+    <div class="skills">
+
+
+      <article class="skill-card">
+
+        <div class="skill-number">
+          01
+        </div>
+
+        <h3>
+          Creative & Design
+        </h3>
+
+        <ul>
+
+          <li>Adobe Illustrator</li>
+
+          <li>Adobe Photoshop</li>
+
+          <li>Canva</li>
+
+          <li>Social Media Design & Editing</li>
+
+        </ul>
+
+      </article>
+
+
+
+      <article class="skill-card">
+
+        <div class="skill-number">
+          02
+        </div>
+
+        <h3>
+          Communication
+        </h3>
+
+        <ul>
+
+          <li>Public Speaking</li>
+
+          <li>Tour & Presentation Facilitation</li>
+
+          <li>Small-Group Engagement</li>
+
+          <li>Inclusive Communication</li>
+
+        </ul>
+
+      </article>
+
+
+
+      <article class="skill-card">
+
+        <div class="skill-number">
+          03
+        </div>
+
+        <h3>
+          Leadership & Operations
+        </h3>
+
+        <ul>
+
+          <li>Event Planning</li>
+
+          <li>Google Workspace</li>
+
+          <li>Data & Attendance Tracking</li>
+
+          <li>Team Collaboration</li>
+
+        </ul>
+
+      </article>
+
+
+
+      <article class="skill-card">
+
+        <div class="skill-number">
+          04
+        </div>
+
+        <h3>
+          Business
+        </h3>
+
+        <ul>
+
+          <li>Marketing</li>
+
+          <li>Accounting Fundamentals</li>
+
+          <li>Financial Recordkeeping</li>
+
+          <li>Cultural Intelligence</li>
+
+        </ul>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     PROJECTS
+========================= -->
+
+<section id="projects" class="projects-section">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <div>
+
+        <p class="section-label">
+          03 / Projects
+        </p>
+
+        <h2>
+          Selected projects & initiatives
+        </h2>
+
+      </div>
+
+      <p class="section-description">
+
+        A portfolio of work drawn from my Rutgers
+        leadership and professional experiences.
+
+      </p>
+
+    </div>
+
+
+    <div class="projects">
+
+
+      <!-- PROJECT 1 -->
+
+      <article class="project">
+
+        <div class="project-number">
+          01
+        </div>
+
+        <h3>
+          Rutgers Orientation Experience
+        </h3>
+
+        <p>
+
+          Helped welcome and personally guide 120+
+          incoming students through their transition
+          to Rutgers while collaborating with a team
+          supporting 7,000+ new students.
+
+          <br><br>
+
+          Facilitated bus tours, small-group meetings,
+          and programs focused on academics, campus
+          resources, and college transition.
+
+        </p>
+
+        <div class="tags">
+
+          <span class="tag">
+            Public Speaking
+          </span>
+
+          <span class="tag">
+            Tour Facilitation
+          </span>
+
+          <span class="tag">
+            Leadership
+          </span>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- PROJECT 2 -->
+
+      <article class="project">
+
+        <div class="project-number">
+          02
+        </div>
+
+        <h3>
+          HARU Dance Operations System
+        </h3>
+
+        <p>
+
+          Organized Google Drive resources,
+          meeting minutes, attendance records,
+          Google Forms, and member data tracking
+          to support a 250+ member dance community.
+
+        </p>
+
+        <div class="tags">
+
+          <span class="tag">
+            Google Workspace
+          </span>
+
+          <span class="tag">
+            Data Organization
+          </span>
+
+          <span class="tag">
+            Collaboration
+          </span>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- PROJECT 3 -->
+
+      <article class="project">
+
+        <div class="project-number">
+          03
+        </div>
+
+        <h3>
+          Learning Through Play Events
+        </h3>
+
+        <p>
+
+          Planned and facilitated hands-on,
+          sensory-based events designed to
+          encourage creativity, fine-motor
+          development, and social interaction
+          among children.
+
+        </p>
+
+        <div class="tags">
+
+          <span class="tag">
+            Event Planning
+          </span>
+
+          <span class="tag">
+            Customer Service
+          </span>
+
+          <span class="tag">
+            Education
+          </span>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+
+    <p class="project-note">
+
+      <strong>Project links:</strong>
+      These are experience-based portfolio projects.
+      Public GitHub repositories or live demos are
+      not currently listed.
+
+    </p>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     EXPERIENCE
+========================= -->
+
+<section id="experience" class="light">
+
+  <div class="container">
+
+    <p class="section-label">
+      04 / Experience
+    </p>
+
+
+    <div class="timeline">
+
+
+      <article class="timeline-item">
+
+        <div class="date">
+          APR 2026 — PRESENT
+        </div>
+
+        <div>
+
+          <h3>
+            Orientation Leader
+          </h3>
+
+          <p class="company">
+            Rutgers Student Orientation and Transition Programs
+          </p>
+
+          <p>
+
+            Guided incoming students, facilitated
+            tours and programs, and helped create
+            an inclusive transition experience
+            for new Rutgers students.
+
+          </p>
+
+        </div>
+
+      </article>
+
+
+
+      <article class="timeline-item">
+
+        <div class="date">
+          SEP 2025 — PRESENT
+        </div>
+
+        <div>
+
+          <h3>
+            Secretary
+          </h3>
+
+          <p class="company">
+            HARU Dance
+          </p>
+
+          <p>
+
+            Manage club records, Google Drive
+            resources, forms, attendance systems,
+            and member tracking while collaborating
+            with the executive board.
+
+          </p>
+
+        </div>
+
+      </article>
+
+
+
+      <article class="timeline-item">
+
+        <div class="date">
+          MAR 2026 — PRESENT
+        </div>
+
+        <div>
+
+          <h3>
+            Active Member
+          </h3>
+
+          <p class="company">
+            Omega Phi Alpha National Service Sorority
+          </p>
+
+          <p>
+
+            Complete 15+ hours of community service
+            each semester and contribute to a
+            supportive chapter community.
+
+          </p>
+
+        </div>
+
+      </article>
+
+
+
+      <article class="timeline-item">
+
+        <div class="date">
+          MAY 2022 — PRESENT
+        </div>
+
+        <div>
+
+          <h3>
+            Employee & Social Media Team
+          </h3>
+
+          <p class="company">
+            Learning Express & The Teaching Room
+          </p>
+
+          <p>
+
+            Support educational events, customer
+            experiences, and hands-on activities
+            for children and families.
+
+          </p>
+
+        </div>
+
+      </article>
+
+
+
+      <article class="timeline-item">
+
+        <div class="date">
+          SEP 2025 — MAY 2026
+        </div>
+
+        <div>
+
+          <h3>
+            President, Honors College & Brett Hall
+          </h3>
+
+          <p class="company">
+            Residence Hall Association
+          </p>
+
+          <p>
+
+            Represented 750+ students, led an
+            executive board of 20+ members, and
+            coordinated community-building initiatives.
+
+          </p>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     EDUCATION
+========================= -->
+
+<section class="education">
+
+  <div class="container education-grid">
+
+    <div>
+
+      <p class="section-label">
+        Education & Certifications
+      </p>
+
+      <h2>
+        Building a business foundation
+        with creative range.
+      </h2>
+
+    </div>
+
+
+    <div class="credentials">
+
+
+      <div class="credential">
+
+        <strong>
+          Rutgers University–New Brunswick
+        </strong>
+
+        <span>
+          Honors College • Rutgers Business School
+        </span>
+
+        <span>
+          B.S. Marketing & Accounting • Expected May 2029
+        </span>
+
+      </div>
+
+
+      <div class="credential">
+
+        <strong>
+          Cultural Intelligence Training
+        </strong>
+
+        <span>
+          2026 • Cultural awareness & inclusive engagement
+        </span>
+
+      </div>
+
+
+      <div class="credential">
+
+        <strong>
+          Bookkeeping Certification
+        </strong>
+
+        <span>
+          2025 • Financial recordkeeping & accounting principles
+        </span>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="contact" class="contact">
+
+  <div class="container">
+
+    <p class="section-label">
+      05 / Contact
+    </p>
+
+    <h2>
+      Let's connect.
+    </h2>
+
+    <p class="contact-text">
+
+      Interested in my work or want to talk
+      about an opportunity? I'd love to hear from you.
+
+    </p>
+
+
+    <div class="contact-links">
+
+      <a href="mailto:alyson.frio@rutgers.edu">
+        alyson.frio@rutgers.edu
+      </a>
+
+      <a
+        href="https://www.linkedin.com/in/alysonfrio"
+        target="_blank"
+      >
+        LinkedIn ↗
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+  <div class="container footer-content">
+
+    <span>
+      © <span id="year"></span> Alyson Frio
+    </span>
+
+    <span>
+      Rutgers Business School • New Brunswick, NJ
+    </span>
+
+  </div>
+
+</footer>
+
+
+
+<script>
+
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+</script>
+
+
+</body>
+</html>
